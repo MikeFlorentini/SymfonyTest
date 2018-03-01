@@ -1,5 +1,24 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-<h1>test</h1>
+
+{% endblock %}
+
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>
+                <!-- title aus variable lesen --> - Upload Catalog
+            </h2>
+            Hier können Löschkataloge automatisch generiert werden. Viel Spaß.
+        </div>
+        <div class="panel-body">
+            <form method="post" action="/test" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input class="form-control" type="file" size="50" accept="text/*" >
+                </div>
+                <button class="btn btn-default">Upload Catalog</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

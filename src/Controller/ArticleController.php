@@ -24,7 +24,7 @@
       */
     public function homepage() 
     {
-        return new Response('OMG!');
+        return $this->render('article/home.twig');
     }
            
     
