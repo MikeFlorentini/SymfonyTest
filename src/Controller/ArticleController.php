@@ -7,7 +7,8 @@
  */
 
  use \Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
- use Symfony\Component\HttpFoundation\Response;
+ use Symfony\Component\HttpFoundation\Response as Response;
+ use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController as AbstractController;
  
 /**
  * Description of HomeController
@@ -15,7 +16,8 @@
  * @author user
  */
 
- class ArticleController {
+ class ArticleController extends AbstractController
+ {
      
      /**
       * @Route("/")
@@ -30,6 +32,6 @@
      * @Route("/test")
      */
     public function test(){
-        return new Response('test');
+        return $this->render('article/show.html.twig');
     }
 }
