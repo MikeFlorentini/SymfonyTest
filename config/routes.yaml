@@ -1,3 +1,20 @@
 #index:
 #    path: /
 #    controller: App\Controller\ArticleController::homepage
+#App\Entity\Product: 
+#    # Object ?!
+#    type: entity
+#    # id des Datensatzes ?!
+#    id: 
+#        id:
+#            type: integer
+#            generator: {strategy: AUTO}
+#    # Datenbankfelder ?!
+#    fields:
+#        name:
+#            type: string
+#            length: 100
+#        price:
+#            type: decimal
+#            sclae: 2
+#            nullable: true

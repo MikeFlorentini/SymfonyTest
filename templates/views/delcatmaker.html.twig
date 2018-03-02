@@ -5,20 +5,27 @@
 {% endblock %}
 
 {% block body %}
+    {{ dump() }}
     <div class="panel panel-default">
         <div class="panel-heading">
             <h2>
-                <!-- title aus variable lesen --> - Upload Catalog
+                {{ title }} - Upload Catalog
             </h2>
             Hier können Löschkataloge automatisch generiert werden. Viel Spaß.
         </div>
         <div class="panel-body">
-            <form method="post" action="/test" enctype="multipart/form-data">
+            <form method="post" action="{{ path('app_delcatmaker_post') }}" enctype="multipart/form-data">
                 <div class="form-group">
                     <input class="form-control" type="file" size="50" accept="text/*" >
                 </div>
-                <button class="btn btn-default">Upload Catalog</button>
+                <button class="btn btn-default" id="upload">Upload Catalog</button>
             </form>
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    
+    <link rel="stylesheet" href="/js/delcatmaker.js">
 {% endblock %}
